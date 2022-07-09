@@ -4,18 +4,25 @@ import "./menu.css"
 function MenuBar(){
     return(
         <div className = "menuBox">
-            
-            <img className = "logo_dawin" alt = "logo" src = "../img/logo_dawin.png"></img>
-
-            <div className = "menubutton1">
-                <div className = "menuLine1"></div>
-                <div className = "menuText1">데이터 형태</div>
+            <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'></link>
+            <div className = "logo">
+                <img className = "logo_dawin" alt = "logo" src = "../img/logo_dawin.png"></img>
             </div>
 
-            <div className = "menubutton2">
-                <div className = "menuLine2"></div>
-                <div className = "menuText2">데이터 시각</div>
-            </div>
+            <ul className = "linkList">
+                <ol>
+                    <a href = "#">
+                        <i className ='bx bx-data'></i>
+                        <span className = "linkName">데이터 확인</span>
+                    </a>
+                </ol>
+                <ol>
+                    <a href = "#">
+                        <i className='bx bx-chart' ></i>
+                        <span className = "linkName">데이터 시각</span>
+                    </a>
+                </ol>
+            </ul>
 
         </div>
     )
