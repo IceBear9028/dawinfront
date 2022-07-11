@@ -11,19 +11,22 @@ function MenuBar(){
 
             <ul className = "linkList">
                 <ol>
-                    <a href = "#">
+                    {/*a태그 href 속성 -> 해당 링크로 이동시켜줌*/}
+                    <a href = "data">
                         <i className ='bx bx-data'></i>
                         <span className = "linkName">데이터 확인</span>
                     </a>
                 </ol>
                 <ol>
-                    <a href = "#">
+                    <a href = "dataVisual">
                         <i className='bx bx-chart' ></i>
                         <span className = "linkName">데이터 시각</span>
                     </a>
                 </ol>
             </ul>
-
+                
+            <h4 className = "info">Ⓒ 2022.DAWIN Solution. All rights reserved.</h4>
+                
         </div>
     )
 }
