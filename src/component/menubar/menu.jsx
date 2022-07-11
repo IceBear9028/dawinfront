@@ -1,34 +1,45 @@
-import React from "react";
-import "./menu.css"
+import React, {useState} from "react";
+import {Link} from 'react-router-dom';
+import styled from "styled-components";
+import {MenuBarList_Visual} from "./menuData";
+import MenuList from "./menulink";
 
-function MenuBar(){
+//styled(Link) => html의 <a href="/page1"> 같은 개념임
+//메뉴의 기능을 눌렀을 때 해당 라우터 링크로 들어간다.
+//이 기능을 사용할 때, app.js에서 react-router-dom을 import 해야 한다.
+
+const Nav = styled.div`
+    position: fixed;
+    width: 170px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    background: #1C5485;
+    padding: 6px 15px
+`;
+
+const Logo = styled.div`
+    display : flex;
+    height : 70px;
+    width : 100%;
+    align-items : center;
+`;
+
+
+const Menubar = () => {
     return(
-        <div className = "menuBox">
-            <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'></link>
-            <div className = "logo">
+    <>
+        <Nav>
+            <Logo>
                 <img className = "logo_dawin" alt = "logo" src = "../img/logo_dawin.png"></img>
-            </div>
+            </Logo>
+            {MenuBarList_Visual.map((item,index) => {
+                return <MenuList item = {item} key = {index}/>;
+            })}
+        </Nav>
+    </>
+    );
+};
 
-            <ul className = "linkList">
-                <ol>
-                    {/*a태그 href 속성 -> 해당 링크로 이동시켜줌*/}
-                    <a href = "data">
-                        <i className ='bx bx-data'></i>
-                        <span className = "linkName">데이터 확인</span>
-                    </a>
-                </ol>
-                <ol>
-                    <a href = "dataVisual">
-                        <i className='bx bx-chart' ></i>
-                        <span className = "linkName">데이터 시각</span>
-                    </a>
-                </ol>
-            </ul>
-                
-            <h4 className = "info">Ⓒ 2022.DAWIN Solution. All rights reserved.</h4>
-                
-        </div>
-    )
-}
-
-export default MenuBar;
+export default Menubar;

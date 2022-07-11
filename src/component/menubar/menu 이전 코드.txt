@@ -1,0 +1,107 @@
+///이전 코드들
+///css, html 문법으로 코드 작성하였음.
+
+///1///menu.jsx
+
+import React from "react";
+import "./menu.css"
+
+function MenuBar(){
+    return(
+        <div className = "menuBox">
+            <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'></link>
+            <div className = "logo">
+                <img className = "logo_dawin" alt = "logo" src = "../img/logo_dawin.png"></img>
+            </div>
+
+            <ul className = "linkList">
+                <ol>
+                    {/*a태그 href 속성 -> 해당 링크로 이동시켜줌*/}
+                    <a href = "data">
+                        <i className ='bx bx-data'></i>
+                        <span className = "linkName">데이터 확인</span>
+                    </a>
+                </ol>
+                <ol>
+                    <a href = "dataVisual">
+                        <i className='bx bx-chart' ></i>
+                        <span className = "linkName">데이터 시각</span>
+                    </a>
+                </ol>
+            </ul>
+                
+            <h4 className = "info">Ⓒ 2022.DAWIN Solution. All rights reserved.</h4>
+                
+        </div>
+    )
+}
+
+export default MenuBar;
+
+-------------------------------------------------------------------------------
+///2/// menu.css
+
+.menuBox{
+    position: fixed;
+    width: 170px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    background: #1C5485;
+    padding: 6px 15px
+}
+.logo{
+    display : flex;
+    height : 70px;
+    width : 100%;
+    align-items : center;
+  
+}
+
+.menuBox ul{
+    margin-top : 10px;
+}
+
+.menuBox .linkList i{
+    position: relative;
+    margin-left: 20px;
+    font-size : 28px;
+    margin-right: 10px;
+    line-height: 60px;
+}
+.menuBox .linkList ol a{
+    color : #fff;
+    display: flex;
+    align-items : center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    width: 190px;
+    margin-left : -90px;
+    border-radius : 1px;
+}
+
+.menuBox .linkList ol a:hover{
+    color : #000;
+    background-color : #fff;
+}
+
+.info{
+    position: absolute;
+    width: 124px;
+    height: 24px;
+    left: 39px;
+    bottom: 20px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+}
+
