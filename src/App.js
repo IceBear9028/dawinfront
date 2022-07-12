@@ -24,13 +24,13 @@ function App() {
   <>
     <BrowserRouter>
       <Menubar />
-        <Dashboard>
-          <Routes>
-            <Route path = '/dataView' element = {<DataView/>} />
-            <Route path = '/dataVisual/histogram' element = {<Histogram/>} />
-            <Route path = '/dataVisual/scatter' element = {<Scatter/>} />
-          </Routes>
-        </Dashboard>
+      <Dashboard>
+        <Routes>
+          <Route path = '/dataView' element = {<DataView/>} />
+          <Route path = '/dataVisual/histogram' element = {<Histogram/>} />
+          <Route path = '/dataVisual/scatter' element = {<Scatter/>} />
+        </Routes>
+      </Dashboard>
     </BrowserRouter>
   </>
   );
