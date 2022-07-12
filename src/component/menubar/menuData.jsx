@@ -11,7 +11,7 @@ export const MenuBarList_Visual = [
     },
     {
         title : "데이터 시각",
-        path : '/dataVisual',
+        path : '#',
         icon : <AiIcons.AiFillFund />,
         iconClosed : <IoIcons.IoIosArrowDown />,
         iconOpened : <IoIcons.IoIosArrowUp />,
