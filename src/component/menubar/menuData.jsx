@@ -29,4 +29,23 @@ export const MenuBarList_Visual = [
         ]
 
     }
-]
+];
+
+export const TopMenuBarList = [
+    {
+        title : "재고관리",
+        path : "/contain",
+        icon : null
+    },
+    {
+        title : "생산관리",
+        path : "/production",
+        icon : null
+    },
+    {
+        title : "AI 분석",
+        path : "/AI_analysis",
+        icon : null
+    }
+
+];

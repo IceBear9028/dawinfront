@@ -1,10 +1,12 @@
 import React  from 'react';
+import styled from 'styled-components';
+import HeadTitle from './element/HeadTitle';
 
 const DataView = () => {
     return(
-        <div className = 'home'>
-            <h1>DataView</h1>
-        </div>
+        <>
+            <HeadTitle>데이터테이블</HeadTitle>
+        </>
     )
 }
 

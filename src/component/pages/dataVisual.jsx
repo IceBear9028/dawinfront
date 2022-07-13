@@ -1,13 +1,14 @@
 import React from 'react';
+import HeadTitle from './element/HeadTitle';
 
 export const Histogram = () => {
     return(
-        <h1>Histogram</h1>
+        <HeadTitle>히스토그램</HeadTitle>
     )
 }
 
 export const Scatter = () => {
     return(
-        <h1>Scatter</h1>
+        <HeadTitle>산점도</HeadTitle>
     )
 }

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import {MenuBarList_Visual} from "./menuData";
-import MenuList from "./menulink";
+import MenuList from "./sidemenuContent";
 
 //styled(Link) => html의 <a href="/page1"> 같은 개념임
 //메뉴의 기능을 눌렀을 때 해당 라우터 링크로 들어간다.
