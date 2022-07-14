@@ -16,8 +16,6 @@ const Dashboard = styled.div`
   top: 70px;
   right : 5px;
   bottom : 5px;
-
-  background: #F9F9F9;
 ` 
 
 function App() {

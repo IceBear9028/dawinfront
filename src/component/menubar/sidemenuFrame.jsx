@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
-import {MenuBarList_Visual} from "./menuData";
+import {MenuBarList_Visual, MenuBarList_Stock} from "./menuData";
 import MenuList from "./sidemenuContent";
 
 //styled(Link) => html의 <a href="/page1"> 같은 개념임
