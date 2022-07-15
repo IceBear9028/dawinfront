@@ -1,37 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import './App.css';
-import Menubar from "./component/menubar/sidemenuFrame";
-import styled from 'styled-components';
-import {Histogram, Scatter} from "./component/pages/dataVisual";
-import DataView from "./component/pages/dataView";
-import TopMenu from './component/menubar/topmenuFrame';
-
+import TopMenu from './component/topmenubar/topmenuFrame';
+import DataChart from './component/pages/data-chart/data-chart';
 //component 만들때 꼭!!! pascal표기법 사용할 것 !!
 
-const Dashboard = styled.div`
-  position: fixed;
-
-  left: 205px;
-  top: 70px;
-  right : 5px;
-  bottom : 5px;
-` 
 
 function App() {
-
   return(
   <>
     <BrowserRouter>
-      <TopMenu />
-      <Menubar />
-      <Dashboard>
-        <Routes>
-          <Route path = '/dataView' element = {<DataView/>} />
-          <Route path = '/dataVisual/histogram' element = {<Histogram/>} />
-          <Route path = '/dataVisual/scatter' element = {<Scatter/>} />
-        </Routes>
-      </Dashboard>
+      <TopMenu/>
+      <Routes>
+        <Route path = '/data-chart/*' element = {<DataChart />}/>
+        <Route path = '/ai-analysis/*'/>
+        <Route path = '/production-manage/*'/>
+        <Route path = '/stock-manage/*'/>
+      </Routes>
     </BrowserRouter>
   </>
   );

@@ -8,7 +8,7 @@ import * as TbIcon from 'react-icons/tb';
 export const MenuBarList_Visual = [
     {
         title : "데이터 확인",
-        path : '/dataView',
+        path : '/data-chart/dataView',
         icon : <AiIcons.AiFillDatabase />
     },
     {
@@ -20,12 +20,12 @@ export const MenuBarList_Visual = [
         subNav:[
             {
                 title : "히스토그램",
-                path : "/dataVisual/histogram",
+                path : "/data-chart/dataVisual/histogram",
                 icon : <VsIcons.VscGraph />
             },
             {
                 title : "산점도",
-                path : "/dataVisual/scatter",
+                path : "/data-chart/dataVisual/scatter",
                 icon : <VsIcons.VscGraphScatter />
             }
         ]
@@ -46,36 +46,4 @@ export const MenuBarList_Visual = [
         path : "/AI_analysis",
         icon : <TbIcon.TbDeviceDesktopAnalytics />
     }
-];
-
-export const MenuBarList_Stock = [
-    {
-        title : "test",
-        path : "/test",
-        icon : null
-    },
-    {
-        title: "test1",
-        path : "/test1"
-    },
-];
-
-
-export const TopMenuBarList = [
-    {
-        title : "재고관리",
-        path : "/Stock_Manage",
-        icon : null
-    },
-    {
-        title : "생산관리",
-        path : "/production",
-        icon : null
-    },
-    {
-        title : "AI 분석",
-        path : "/AI_analysis",
-        icon : null
-    }
-
 ];

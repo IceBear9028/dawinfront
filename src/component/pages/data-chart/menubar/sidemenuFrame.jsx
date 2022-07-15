@@ -26,6 +26,23 @@ const Logo = styled.div`
     align-items : center;
 `;
 
+const VersionInfo = styled.p`
+    position: absolute;
+    width: 124px;
+    height: 24px;
+    left: 39px;
+    bottom: 20px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+`;
 
 const Menubar = () => {
     return(
@@ -37,6 +54,7 @@ const Menubar = () => {
             {MenuBarList_Visual.map((item,index) => {
                 return <MenuList item = {item} key = {index}/>;
             })}
+            <VersionInfo>Ⓒ 2022.DAWIN Solution. All rights reserved.</VersionInfo>
         </Nav>
     </>
     );

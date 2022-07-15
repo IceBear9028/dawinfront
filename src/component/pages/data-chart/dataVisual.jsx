@@ -1,10 +1,11 @@
 import React from 'react';
-import HeadTitle from './element/HeadTitle';
-import DashBoard from './element/Dashboard';
-import { BarData } from './element/testdata/testDataSet';
+import HeadTitle from '../../commonElement/HeadTitle';
+import DashBoard from '../../commonElement/Dashboard';
+import { BarData } from '../../commonElement/testdata/testDataSet';
 import { ResponsiveBar } from '@nivo/bar'
 
-const MyResponsiveBar = ({ data /* see data tab */ }) => (
+/**
+const MyResponsiveBar = ( data  ) => {
     <ResponsiveBar
         data={data}
         keys={[
@@ -122,6 +123,7 @@ const MyResponsiveBar = ({ data /* see data tab */ }) => (
         barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
     />
 )
+*/
 
 
 export const Histogram = () => {
@@ -129,6 +131,7 @@ export const Histogram = () => {
         <>    
             <HeadTitle>히스토그램</HeadTitle>
             <DashBoard>
+                {/*
                 <p>안녕?</p>
                 <MyResponsiveBar data = {BarData}/>
                 <ResponsiveBar
@@ -247,16 +250,18 @@ export const Histogram = () => {
                     ariaLabel="Nivo bar chart demo"
                     barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
                 />
+                */}
 
             </DashBoard>
         </>
     )   
 }
 
+
+
 export const Scatter = () => {
     return(
         <>
-            <HeadTitle>산점도</HeadTitle>
             <DashBoard>
                 <p>안녕?ㅅㅂ?</p>
             </DashBoard>

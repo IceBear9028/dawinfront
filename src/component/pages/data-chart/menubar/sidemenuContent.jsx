@@ -73,6 +73,7 @@ const MenuList = ({item}) => {
 
     return(
     <>
+        {/* 1. 큰 메뉴리스트*/}
         <ListLink to = {item.path} onClick={item.subNav && showSubnav}>
             <div>
                 {item.icon}
@@ -87,6 +88,8 @@ const MenuList = ({item}) => {
                 }
             </div>
         </ListLink>
+        
+        {/* 2. 작은 메뉴리스트*/}
         {subnav && item.subNav.map((item, index)=> {
             return(
                 <DropdownLink to={item.path} key={index}>
@@ -95,7 +98,6 @@ const MenuList = ({item}) => {
                 </DropdownLink>
             )
         })}
-        <VersionInfo>Ⓒ 2022.DAWIN Solution. All rights reserved.</VersionInfo>
     </>
     );
 };

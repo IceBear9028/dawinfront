@@ -1,6 +1,6 @@
 import React  from 'react';
 import styled from 'styled-components';
-import HeadTitle from './element/HeadTitle';
+import HeadTitle from '../../commonElement/HeadTitle';
 
 const DataView = () => {
     return(
