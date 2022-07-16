@@ -105,3 +105,21 @@ export default MenuBar;
 
 }
 
+
+const topmenuData = [
+    {
+        title : "생산관리",
+        path : "/production",
+        icon : <RIicon.RiSurveyLine />
+    },
+    {
+        title : "재고관리",
+        path : "/Stock_manage",
+        icon : <TbIcon.TbBuildingFactory2 />
+    },
+    {
+        title : "AI 분석",
+        path : "/AI_analysis",
+        icon : <TbIcon.TbDeviceDesktopAnalytics />
+    }
+]

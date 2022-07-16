@@ -1,7 +1,7 @@
 import React from 'react';
 import Menubar from './menubar/sidemenuFrame';
 import styled from 'styled-components';
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {Route,Routes} from 'react-router-dom'
 import DataView from './dataView';
 import {Histogram,Scatter} from './dataVisual';
 
@@ -16,14 +16,14 @@ const Dashboard = styled.div`
 const DataChart = () => {
     return (
         <>
-                <Menubar />
-                <Dashboard>
-                    <Routes>
-                        <Route path = 'dataView' element = {<DataView/>} />
-                        <Route path = 'dataVisual/histogram' element = {<Histogram/>} />
-                        <Route path = 'dataVisual/scatter' element = {<Scatter/>} />
-                    </Routes>
-                </Dashboard>
+            <Menubar />
+            <Dashboard>
+                <Routes>
+                    <Route path = 'dataView' element = {<DataView/>} />
+                    <Route path = 'dataVisual/histogram' element = {<Histogram/>} />
+                    <Route path = 'dataVisual/scatter' element = {<Scatter/>} />
+                </Routes>
+            </Dashboard>
         </>
     )
 }

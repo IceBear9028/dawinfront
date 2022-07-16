@@ -10,7 +10,7 @@ function App() {
   return(
   <>
     <BrowserRouter>
-      <TopMenu/>
+      <TopMenu/>{/* <- Link 가 담겨져 있는 component */}
       <Routes>
         <Route path = '/data-chart/*' element = {<DataChart />}/>
         <Route path = '/ai-analysis/*'/>

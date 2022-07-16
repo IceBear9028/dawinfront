@@ -5,7 +5,6 @@ import * as VsIcons from 'react-icons/vsc';
 import * as RIicon from 'react-icons/ri';
 import * as TbIcon from 'react-icons/tb';
 
-
 export const TopMenuBarList = [
     {
         title : "재고관리",

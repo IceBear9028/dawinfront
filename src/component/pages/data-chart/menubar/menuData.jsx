@@ -2,8 +2,6 @@ import React from "react";
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as VsIcons from 'react-icons/vsc';
-import * as RIicon from 'react-icons/ri';
-import * as TbIcon from 'react-icons/tb';
 
 export const MenuBarList_Visual = [
     {
@@ -30,20 +28,5 @@ export const MenuBarList_Visual = [
             }
         ]
 
-    },
-    {
-        title : "생산관리",
-        path : "/production",
-        icon : <RIicon.RiSurveyLine />
-    },
-    {
-        title : "재고관리",
-        path : "/Stock_manage",
-        icon : <TbIcon.TbBuildingFactory2 />
-    },
-    {
-        title : "AI 분석",
-        path : "/AI_analysis",
-        icon : <TbIcon.TbDeviceDesktopAnalytics />
     }
 ];
