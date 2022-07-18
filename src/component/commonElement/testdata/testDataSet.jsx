@@ -1,107 +1,138 @@
-export const BarData = [
+export const tableData = [
     {
-      "country": "AD",
-      "hot dog": 102,
-      "hot dogColor": "hsl(137, 70%, 50%)",
-      "burger": 80,
-      "burgerColor": "hsl(174, 70%, 50%)",
-      "sandwich": 126,
-      "sandwichColor": "hsl(289, 70%, 50%)",
-      "kebab": 22,
-      "kebabColor": "hsl(116, 70%, 50%)",
-      "fries": 3,
-      "friesColor": "hsl(75, 70%, 50%)",
-      "donut": 197,
-      "donutColor": "hsl(19, 70%, 50%)"
+      id: 1,
+      first_name: 'Beret',
+      last_name: 'Lennard',
+      email: 'blennard0@pcworld.com',
+      gender: 'Female',
+      ip_address: '213.196.192.52'
     },
     {
-      "country": "AE",
-      "hot dog": 167,
-      "hot dogColor": "hsl(127, 70%, 50%)",
-      "burger": 121,
-      "burgerColor": "hsl(281, 70%, 50%)",
-      "sandwich": 16,
-      "sandwichColor": "hsl(83, 70%, 50%)",
-      "kebab": 85,
-      "kebabColor": "hsl(86, 70%, 50%)",
-      "fries": 168,
-      "friesColor": "hsl(4, 70%, 50%)",
-      "donut": 48,
-      "donutColor": "hsl(159, 70%, 50%)"
+      id: 2,
+      first_name: 'Tera',
+      last_name: 'Choke',
+      email: 'tchoke1@theatlantic.com',
+      gender: 'Male',
+      ip_address: '101.152.241.70'
     },
     {
-      "country": "AF",
-      "hot dog": 19,
-      "hot dogColor": "hsl(265, 70%, 50%)",
-      "burger": 17,
-      "burgerColor": "hsl(213, 70%, 50%)",
-      "sandwich": 87,
-      "sandwichColor": "hsl(15, 70%, 50%)",
-      "kebab": 43,
-      "kebabColor": "hsl(179, 70%, 50%)",
-      "fries": 14,
-      "friesColor": "hsl(197, 70%, 50%)",
-      "donut": 66,
-      "donutColor": "hsl(327, 70%, 50%)"
+      id: 3,
+      first_name: 'Lyn',
+      last_name: 'Bowart',
+      email: 'lbowart2@odnoklassniki.ru',
+      gender: 'Male',
+      ip_address: '188.127.126.94'
     },
     {
-      "country": "AG",
-      "hot dog": 4,
-      "hot dogColor": "hsl(204, 70%, 50%)",
-      "burger": 8,
-      "burgerColor": "hsl(232, 70%, 50%)",
-      "sandwich": 200,
-      "sandwichColor": "hsl(259, 70%, 50%)",
-      "kebab": 22,
-      "kebabColor": "hsl(159, 70%, 50%)",
-      "fries": 24,
-      "friesColor": "hsl(133, 70%, 50%)",
-      "donut": 39,
-      "donutColor": "hsl(137, 70%, 50%)"
+      id: 4,
+      first_name: 'Bert',
+      last_name: 'Huckett',
+      email: 'bhuckett3@tinypic.com',
+      gender: 'Female',
+      ip_address: '247.156.243.148'
     },
     {
-      "country": "AI",
-      "hot dog": 61,
-      "hot dogColor": "hsl(280, 70%, 50%)",
-      "burger": 134,
-      "burgerColor": "hsl(154, 70%, 50%)",
-      "sandwich": 154,
-      "sandwichColor": "hsl(335, 70%, 50%)",
-      "kebab": 23,
-      "kebabColor": "hsl(92, 70%, 50%)",
-      "fries": 140,
-      "friesColor": "hsl(287, 70%, 50%)",
-      "donut": 171,
-      "donutColor": "hsl(178, 70%, 50%)"
+      id: 5,
+      first_name: 'Drew',
+      last_name: 'Jenicke',
+      email: 'djenicke4@businessinsider.com',
+      gender: 'Male',
+      ip_address: '0.185.35.172'
     },
     {
-      "country": "AL",
-      "hot dog": 105,
-      "hot dogColor": "hsl(195, 70%, 50%)",
-      "burger": 10,
-      "burgerColor": "hsl(282, 70%, 50%)",
-      "sandwich": 159,
-      "sandwichColor": "hsl(203, 70%, 50%)",
-      "kebab": 18,
-      "kebabColor": "hsl(118, 70%, 50%)",
-      "fries": 118,
-      "friesColor": "hsl(143, 70%, 50%)",
-      "donut": 116,
-      "donutColor": "hsl(135, 70%, 50%)"
+      id: 6,
+      first_name: 'Deloria',
+      last_name: 'Pepperill',
+      email: 'dpepperill5@meetup.com',
+      gender: 'Non-binary',
+      ip_address: '101.44.39.120'
     },
     {
-      "country": "AM",
-      "hot dog": 47,
-      "hot dogColor": "hsl(276, 70%, 50%)",
-      "burger": 157,
-      "burgerColor": "hsl(70, 70%, 50%)",
-      "sandwich": 85,
-      "sandwichColor": "hsl(232, 70%, 50%)",
-      "kebab": 80,
-      "kebabColor": "hsl(115, 70%, 50%)",
-      "fries": 169,
-      "friesColor": "hsl(72, 70%, 50%)",
-      "donut": 105,
-      "donutColor": "hsl(266, 70%, 50%)"
+      id: 7,
+      first_name: 'Spense',
+      last_name: 'Ivashnyov',
+      email: 'sivashnyov6@hexun.com',
+      gender: 'Female',
+      ip_address: '253.192.252.49'
+    },
+    {
+      id: 8,
+      first_name: 'Elden',
+      last_name: 'Chaucer',
+      email: 'echaucer7@mozilla.com',
+      gender: 'Agender',
+      ip_address: '60.70.120.186'
+    },
+    {
+      id: 9,
+      first_name: 'Sholom',
+      last_name: 'Deetch',
+      email: 'sdeetch8@so-net.ne.jp',
+      gender: 'Female',
+      ip_address: '218.36.95.147'
+    },
+    {
+      id: 10,
+      first_name: 'Genovera',
+      last_name: 'Colby',
+      email: 'gcolby9@dagondesign.com',
+      gender: 'Non-binary',
+      ip_address: '199.140.221.248'
     }
-  ]
+  ];
+
+export const Scatterdata = [
+    { x: 100, y: 200, z: 200 },
+    { x: 120, y: 100, z: 260 },
+    { x: 170, y: 300, z: 400 },
+    { x: 140, y: 250, z: 280 },
+    { x: 150, y: 400, z: 500 },
+    { x: 110, y: 280, z: 200 },
+  ];
+
+export const Barchartdata = [
+    {
+      name: 'Page A',
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: 'Page B',
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: 'Page C',
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: 'Page D',
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: 'Page E',
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: 'Page F',
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: 'Page G',
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+  
+  

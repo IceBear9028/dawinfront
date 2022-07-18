@@ -3,7 +3,7 @@ import Menubar from './menubar/sidemenuFrame';
 import styled from 'styled-components';
 import {Route,Routes} from 'react-router-dom'
 import DataView from './dataView';
-import {Histogram,Scatter} from './dataVisual';
+import {HistogramPage,ScatterPage} from './dataVisual';
 
 const Dashboard = styled.div`
   position: fixed;
@@ -20,8 +20,8 @@ const DataChart = () => {
             <Dashboard>
                 <Routes>
                     <Route path = 'dataView' element = {<DataView/>} />
-                    <Route path = 'dataVisual/histogram' element = {<Histogram/>} />
-                    <Route path = 'dataVisual/scatter' element = {<Scatter/>} />
+                    <Route path = 'dataVisual/histogram' element = {<HistogramPage/>} />
+                    <Route path = 'dataVisual/scatter' element = {<ScatterPage/>} />
                 </Routes>
             </Dashboard>
         </>

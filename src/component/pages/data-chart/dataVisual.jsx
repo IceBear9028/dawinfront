@@ -1,269 +1,80 @@
 import React from 'react';
 import HeadTitle from '../../commonElement/HeadTitle';
 import DashBoard from '../../commonElement/Dashboard';
-import { BarData } from '../../commonElement/testdata/testDataSet';
-import { ResponsiveBar } from '@nivo/bar'
-
-/**
-const MyResponsiveBar = ( data  ) => {
-    <ResponsiveBar
-        data={data}
-        keys={[
-            'hot dog',
-            'burger',
-            'sandwich',
-            'kebab',
-            'fries',
-            'donut'
-        ]}
-        indexBy="country"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        valueScale={{ type: 'linear' }}
-        indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'nivo' }}
-        defs={[
-            {
-                id: 'dots',
-                type: 'patternDots',
-                background: 'inherit',
-                color: '#38bcb2',
-                size: 4,
-                padding: 1,
-                stagger: true
-            },
-            {
-                id: 'lines',
-                type: 'patternLines',
-                background: 'inherit',
-                color: '#eed312',
-                rotation: -45,
-                lineWidth: 6,
-                spacing: 10
-            }
-        ]}
-        fill={[
-            {
-                match: {
-                    id: 'fries'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'sandwich'
-                },
-                id: 'lines'
-            }
-        ]}
-        borderColor={{
-            from: 'color',
-            modifiers: [
-                [
-                    'darker',
-                    1.6
-                ]
-            ]
-        }}
-        axisTop={null}
-        axisRight={null}
-        axisBottom={{
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'country',
-            legendPosition: 'middle',
-            legendOffset: 32
-        }}
-        axisLeft={{
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'food',
-            legendPosition: 'middle',
-            legendOffset: -40
-        }}
-        labelSkipWidth={12}
-        labelSkipHeight={12}
-        labelTextColor={{
-            from: 'color',
-            modifiers: [
-                [
-                    'darker',
-                    1.6
-                ]
-            ]
-        }}
-        legends={[
-            {
-                dataFrom: 'keys',
-                anchor: 'bottom-right',
-                direction: 'column',
-                justify: false,
-                translateX: 120,
-                translateY: 0,
-                itemsSpacing: 2,
-                itemWidth: 100,
-                itemHeight: 20,
-                itemDirection: 'left-to-right',
-                itemOpacity: 0.85,
-                symbolSize: 20,
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemOpacity: 1
-                        }
-                    }
-                ]
-            }
-        ]}
-        role="application"
-        ariaLabel="Nivo bar chart demo"
-        barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
-    />
-)
-*/
+import { Scatterdata, Barchartdata } from '../../commonElement/testdata/testDataSet';
+import { ScatterChart,BarChart,Bar, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, } from 'recharts';
 
 
-export const Histogram = () => {
+const ScatterPlot = ({data}) => {
+    return (
+        <ResponsiveContainer width="95%" aspect = {2.7}>
+          <ScatterChart
+            width={400}
+            height={400}
+            margin={{
+              top: 30,
+              right: 20,
+              bottom: 20,
+              left: 20,
+            }}
+          >
+            <CartesianGrid />
+            <XAxis type="number" dataKey="x" name="stature" unit="cm" />
+            <YAxis type="number" dataKey="y" name="weight" unit="kg" />
+            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+            <Scatter name="A school" data={data} fill="#8884d8" />
+          </ScatterChart>
+        </ResponsiveContainer>
+      );
+}
+
+
+const BarchartPlot = ({data}) => {
+    return (
+        <ResponsiveContainer width="95%" aspect = {2.5}>
+          <BarChart
+            width={500}
+            height={300}
+            data={data}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+            <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+            <Bar dataKey="uv" fill="#ffc658" />
+          </BarChart>
+        </ResponsiveContainer>
+    );
+}
+
+
+export const HistogramPage = () => {
     return(
         <>    
-            <HeadTitle>히스토그램</HeadTitle>
+            <HeadTitle>막대그래프</HeadTitle>
             <DashBoard>
-                {/*
-                <p>안녕?</p>
-                <MyResponsiveBar data = {BarData}/>
-                <ResponsiveBar
-                    data={data}
-                    keys={[
-                        'hot dog',
-                        'burger',
-                        'sandwich',
-                        'kebab',
-                        'fries',
-                        'donut'
-                    ]}
-                    indexBy="country"
-                    margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-                    padding={0.3}
-                    valueScale={{ type: 'linear' }}
-                    indexScale={{ type: 'band', round: true }}
-                    colors={{ scheme: 'nivo' }}
-                    defs={[
-                        {
-                            id: 'dots',
-                            type: 'patternDots',
-                            background: 'inherit',
-                            color: '#38bcb2',
-                            size: 4,
-                            padding: 1,
-                            stagger: true
-                        },
-                        {
-                            id: 'lines',
-                            type: 'patternLines',
-                            background: 'inherit',
-                            color: '#eed312',
-                            rotation: -45,
-                            lineWidth: 6,
-                            spacing: 10
-                        }
-                    ]}
-                    fill={[
-                        {
-                            match: {
-                                id: 'fries'
-                            },
-                            id: 'dots'
-                        },
-                        {
-                            match: {
-                                id: 'sandwich'
-                            },
-                            id: 'lines'
-                        }
-                    ]}
-                    borderColor={{
-                        from: 'color',
-                        modifiers: [
-                            [
-                                'darker',
-                                1.6
-                            ]
-                        ]
-                    }}
-                    axisTop={null}
-                    axisRight={null}
-                    axisBottom={{
-                        tickSize: 5,
-                        tickPadding: 5,
-                        tickRotation: 0,
-                        legend: 'country',
-                        legendPosition: 'middle',
-                        legendOffset: 32
-                    }}
-                    axisLeft={{
-                        tickSize: 5,
-                        tickPadding: 5,
-                        tickRotation: 0,
-                        legend: 'food',
-                        legendPosition: 'middle',
-                        legendOffset: -40
-                    }}
-                    labelSkipWidth={12}
-                    labelSkipHeight={12}
-                    labelTextColor={{
-                        from: 'color',
-                        modifiers: [
-                            [
-                                'darker',
-                                1.6
-                            ]
-                        ]
-                    }}
-                    legends={[
-                        {
-                            dataFrom: 'keys',
-                            anchor: 'bottom-right',
-                            direction: 'column',
-                            justify: false,
-                            translateX: 120,
-                            translateY: 0,
-                            itemsSpacing: 2,
-                            itemWidth: 100,
-                            itemHeight: 20,
-                            itemDirection: 'left-to-right',
-                            itemOpacity: 0.85,
-                            symbolSize: 20,
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemOpacity: 1
-                                    }
-                                }
-                            ]
-                        }
-                    ]}
-                    role="application"
-                    ariaLabel="Nivo bar chart demo"
-                    barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
-                />
-                */}
-
+                <BarchartPlot data = {Barchartdata} />
             </DashBoard>
         </>
     )   
 }
 
 
-
-export const Scatter = () => {
+export const ScatterPage = () => {
     return(
         <>
+            <HeadTitle>산점도</HeadTitle>
             <DashBoard>
-                <p>안녕?ㅅㅂ?</p>
+                <ScatterPlot data = {Scatterdata}/>
             </DashBoard>
         </>
     )

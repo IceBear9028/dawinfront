@@ -5,7 +5,7 @@ import * as VsIcons from 'react-icons/vsc';
 
 export const MenuBarList_Visual = [
     {
-        title : "데이터 확인",
+        title : "데이터 테이블",
         path : '/data-chart/dataView',
         icon : <AiIcons.AiFillDatabase />
     },
@@ -17,7 +17,7 @@ export const MenuBarList_Visual = [
         iconOpened : <IoIcons.IoIosArrowUp />,
         subNav:[
             {
-                title : "히스토그램",
+                title : "막대그래프",
                 path : "/data-chart/dataVisual/histogram",
                 icon : <VsIcons.VscGraph />
             },
