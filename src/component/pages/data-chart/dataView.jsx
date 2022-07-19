@@ -1,16 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import HeadTitle from '../../commonElement/HeadTitle';
+import SelectBox from '../../commonElement/SelectBox';
 import { tableData } from '../../commonElement/testdata/testDataSet';
-import {
-    TableContainer,
-    Table,
-    TableHead,
-    TableBody,
-    TableRow,
-    TableCell,
-    Paper
-  } from '@mui/material';
+import {TableContainer,Table,TableHead,TableBody,TableRow,TableCell,Paper} from '@mui/material';
+
+const selectData = [
+  { value : 10,
+    boxtext : "test1"
+  },
+  {
+    value : 20,
+    boxtext : "test2"
+  },
+  {
+    value : 30,
+    boxtext : "test3"
+  },
+  {
+    value : 40,
+    boxtext : "test4"
+  }
+];
 
 
 const MuiTable = () => {
@@ -47,6 +58,10 @@ const DataView = () => {
     return(
         <>
             <HeadTitle>데이터테이블</HeadTitle>
+            <div>
+              <SelectBox data = {selectData} labelName = {"test1"} width = {220} />
+              <SelectBox data = {selectData} labelName = {"test2"} width = {220} />
+            </div>
             <MuiTable />
         </>
     )
