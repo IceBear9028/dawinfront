@@ -6,13 +6,14 @@ import {Link} from "react-router-dom";
 const ListLink = styled(Link)`
     diplay : flex;
     justify-content: flex-end;
-    float : right;
+    float : left;
     align-items : center;
     padding-top : 3px;
     padding-right : 30px;
     padding-left : 30px;
     text-decoration : none;
-    height : 62px;
+    height : 58px;
+    border-radius : 10px;
 
     &:hover{
         cursor : pointer;
@@ -28,16 +29,42 @@ const ListLabel = styled.p`
     color : #000;
     
 `
-const Space = styled.div`
-    height : 62px;
-    width : 20px;
-    top : 0px;
-    right : 0px;
+const LogoutLink = styled(Link)`
+    display :flex;
+    justify-content: flex-end;
+    float : right;
+    align-items : center;
+    text-decoration : none;
+    height : 58px;
+    padding-left : 20px;
+    padding-right : 20px;
+
+    &:hover{
+        cursor : pointer;
+        background : #DADADA;
+        transition : all 0.2s ease;
+    }
 `
+
+const LogoutLabel = styled.p`
+    flex-flow : row nowrap;
+    font-size : 15px;
+    color : #000;
+`
+const LogoutIcon = styled.p`
+    flex-flow : row nowrap;
+    font-size : 18px;
+    color : #000;
+    padding-right : 10px;
+`
+
 const TopmenuList = ({item}) => {
     return(
         <>
             <ListLink to = {item.path}>
+                <ListLabel>
+                    {item.icon}
+                </ListLabel>
                 <ListLabel>
                     {item.title}
                 </ListLabel>
@@ -46,4 +73,22 @@ const TopmenuList = ({item}) => {
     );
 };
 
-export default TopmenuList
+const TopmenuLogout = ({logoutItem}) => {
+    return(
+        <>
+            <LogoutLink to = {logoutItem.path}>
+                <LogoutIcon>
+                    {logoutItem.icon}
+                </LogoutIcon>
+
+                <LogoutLabel>
+                    {logoutItem.title}
+                </LogoutLabel>
+
+                    
+            </LogoutLink>
+        </>
+    )
+}
+
+export {TopmenuList, TopmenuLogout}

@@ -10,8 +10,10 @@ const HeadTitle = styled.span`
     color :#000;
     align-items : center;
     justify-content : center;
-    border-radius: 2px;
+    border-radius: 10px;
     background :#DADADA;
+    margin-left : 10px;
+    margin-top : 10px;
 
 `
 export default HeadTitle

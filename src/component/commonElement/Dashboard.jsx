@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const DashBoard = styled.div`
-    top : 50px;
-    display : flex;
+    position : fixed;
+    top : 135px;
+    left : 220px;
     background: #F9F9F9;
 `
 export default DashBoard

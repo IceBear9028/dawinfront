@@ -4,6 +4,7 @@ import * as IoIcons from 'react-icons/io';
 import * as VsIcons from 'react-icons/vsc';
 import * as RIicon from 'react-icons/ri';
 import * as TbIcon from 'react-icons/tb';
+import * as FiIcon from 'react-icons/fi';
 
 export const TopMenuBarList = [
     {
@@ -28,3 +29,9 @@ export const TopMenuBarList = [
     }
 
 ];
+
+export const TopMenuLogoutList = {
+        title : "로그아웃",
+        path : "#",
+        icon : <FiIcon.FiLogOut />
+    }

@@ -9,20 +9,23 @@ import MenuList from "./sidemenuContent";
 
 const Nav = styled.div`
     position: fixed;
-    width: 170px;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-
+    width: 175px;
+    bottom :10px;
+    left: 10px;
+    top: 10px;
     background: #1C5485;
-    padding: 6px 15px
+    padding-left : 10px;
+    padding-right : 10px;
+    border-radius : 10px;
+    box-shadow : -0.3px 1px 1.5px 1px #909090;
 `;
 
 const Logo = styled.div`
     display : flex;
-    height : 70px;
+    height : 90px;
     width : 100%;
     align-items : center;
+    padding : 0px 10px;
 `;
 
 const VersionInfo = styled.p`
