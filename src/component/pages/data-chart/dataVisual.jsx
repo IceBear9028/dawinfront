@@ -1,6 +1,6 @@
 import React from 'react';
 import HeadTitle from '../../commonElement/HeadTitle';
-import DashBoard from '../../commonElement/Dashboard';
+import BoardBase from '../../commonElement/boardBase';
 import { Scatterdata, Barchartdata } from '../../commonElement/testdata/testDataSet';
 import { ScatterChart,BarChart,Bar, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, } from 'recharts';
 
@@ -61,9 +61,9 @@ export const HistogramPage = () => {
     return(
         <>    
             <HeadTitle>막대그래프</HeadTitle>
-            <DashBoard>
+            <BoardBase>
                 <BarchartPlot data = {Barchartdata} />
-            </DashBoard>
+            </BoardBase>
         </>
     )   
 }
@@ -73,9 +73,9 @@ export const ScatterPage = () => {
     return(
         <>
             <HeadTitle>산점도</HeadTitle>
-            <DashBoard>
+            <BoardBase>
                 <ScatterPlot data = {Scatterdata}/>
-            </DashBoard>
+            </BoardBase>
         </>
     )
 }

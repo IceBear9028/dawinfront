@@ -6,14 +6,11 @@ const HeadTitle = styled.span`
     width : 150px;
     height : 50px;
     font-size : 20px;
-    background : #000;
     color :#000;
     align-items : center;
     justify-content : center;
     border-radius: 10px;
-    background :#DADADA;
-    margin-left : 10px;
-    margin-top : 10px;
+    background :#FFBEC3;
 
 `
 export default HeadTitle

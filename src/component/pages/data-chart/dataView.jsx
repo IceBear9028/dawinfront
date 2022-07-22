@@ -4,7 +4,7 @@ import HeadTitle from '../../commonElement/HeadTitle';
 import SelectBox from '../../commonElement/SelectBox';
 import { tableData } from '../../commonElement/testdata/testDataSet';
 import {TableContainer,Table,TableHead,TableBody,TableRow,TableCell,Paper} from '@mui/material';
-import DashBoard from '../../commonElement/Dashboard';
+import BoardBase from '../../commonElement/boardBase';
 
 const selectData = [
   { value : 10,
@@ -59,13 +59,13 @@ const DataView = () => {
     return(
         <>
             <HeadTitle>데이터테이블</HeadTitle>
-            <DashBoard>
+            <BoardBase>
               <div>
                 <SelectBox data = {selectData} labelName = {"test1"} width = {220} />
                 <SelectBox data = {selectData} labelName = {"test2"} width = {220} />
               </div>
               <MuiTable />
-            </DashBoard>
+            </BoardBase>
         </>
     )
 }

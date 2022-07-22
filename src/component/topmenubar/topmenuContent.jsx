@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 
 const ListLink = styled(Link)`
-    diplay : flex;
+    display : flex;
     justify-content: flex-end;
     float : left;
     align-items : center;
